@@ -6,7 +6,14 @@ const DATA = [
   {id: 1, text: 'Item 1'},
   {id: 2, text: 'Item 2'},
   {id: 3, text: 'Item 3'},
-  {id: 4, text: 'Item 4'}
+  {id: 4, text: 'Item 4'},
+  {id: 5, text: 'Item 5'},
+  {id: 6, text: 'Item 6'},
+  {id: 7, text: 'Item 7'},
+  {id: 8, text: 'Item 8'},
+  {id: 9, text: 'Item 9'},
+  {id: 10, text: 'Item 10'}
+  
 ]
 
 const MainView2 = () => {
@@ -63,7 +70,7 @@ const MainView2 = () => {
         visible={isModalVisible}
         onRequestClose= {() => setisModalVisible(false)}>
           <View style={styles.modalView}>
-            <Text style={styles.text}>Change</Text>
+            <Text style={styles.text}>Escrever</Text>
             <TextInput
               style={styles.textInput}
               onChangeText={(text) => setinputText(text)}
@@ -77,7 +84,7 @@ const MainView2 = () => {
             onPress={() => onPressSaveEdit()}
             style={styles.touchableSave}
             >
-              <Text style={styles.text}>Save</Text>
+              <Text style={styles.text}>Salvar</Text>
 
             </TouchableOpacity>
 
@@ -95,32 +102,39 @@ const styles = StyleSheet.create({
   },
   item: {
     borderBottomWidth:1,
-    borderBottomColor: 'yellow',
+    borderBottomColor: '#4B0082',
     alignItems: 'flex-start'
   },
   text: {
-    marginVertical:30,
-    fontSize:25,
+    marginVertical:20,
+    fontSize:15,
     fontWeight: 'bold',
-    marginLeft:10
+    marginLeft:20,
+    color: '#111',
+    
   },
   textInput: {
     width: '90%',
-    height: 70,
-    borderColor: 'grey',
+    height: 50,
+    borderColor: '#4B0082',
     borderWidth: 1,
-    fontSize:25
+    fontSize:25,
+    backgroundColor: '#fff',
+    borderRadius:15
   },
   modalView: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: '#111',
+   
   },
   touchableSave:{
-    backgroundColor: 'orange',
-    paddingHorizontal: 100,
+    backgroundColor: '#4B0082',
+    paddingHorizontal: 80,
     alignItems: 'center',
-    marginTop: 20
+    marginTop: 20,
+  
   }
 })
 /*
