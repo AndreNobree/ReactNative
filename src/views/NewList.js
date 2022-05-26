@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     buttonNewTask: {
         color: '#4B0082',
         fontSize: 20,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        borderRadius: 25,
     }
 })
 

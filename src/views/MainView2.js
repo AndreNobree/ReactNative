@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet,  View, Text, StatusBar, FlatList, Modal, Touc
 import { useHandler } from "react-native-reanimated";
 
 const DATA = [
-  {id: 1, text: 'Item 1'},
+  {id: 1, text: 'item 1'},
   {id: 2, text: 'Item 2'},
   {id: 3, text: 'Item 3'},
   {id: 4, text: 'Item 4'},
@@ -12,7 +12,17 @@ const DATA = [
   {id: 7, text: 'Item 7'},
   {id: 8, text: 'Item 8'},
   {id: 9, text: 'Item 9'},
-  {id: 10, text: 'Item 10'}
+  {id: 10, text: 'Item 10'},
+  {id: 11, text: 'Item 11'},
+  {id: 12, text: 'Item 12'},
+  {id: 13, text: 'Item 13'},
+  {id: 14, text: 'Item 14'},
+  {id: 15, text: 'Item 15'},
+  {id: 16, text: 'Item 16'},
+  {id: 17, text: 'Item 17'},
+  {id: 18, text: 'Item 18'},
+  {id: 19, text: 'Item 19'},
+  {id: 20, text: 'Item 20'},
   
 ]
 
@@ -70,7 +80,7 @@ const MainView2 = () => {
         visible={isModalVisible}
         onRequestClose= {() => setisModalVisible(false)}>
           <View style={styles.modalView}>
-            <Text style={styles.text}>Escrever</Text>
+            <Text style={styles.text3}>Escreva</Text>
             <TextInput
               style={styles.textInput}
               onChangeText={(text) => setinputText(text)}
@@ -84,7 +94,7 @@ const MainView2 = () => {
             onPress={() => onPressSaveEdit()}
             style={styles.touchableSave}
             >
-              <Text style={styles.text}>Salvar</Text>
+              <Text style={styles.text2}>Salvar</Text>
 
             </TouchableOpacity>
 
@@ -113,6 +123,18 @@ const styles = StyleSheet.create({
     color: '#111',
     
   },
+  text2: {
+    marginVertical:10,
+    fontSize:20,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  text3: {
+    marginVertical:50,
+    fontSize:30,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
   textInput: {
     width: '90%',
     height: 50,
@@ -120,7 +142,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     fontSize:25,
     backgroundColor: '#fff',
-    borderRadius:15
+    borderRadius:15,
+    textAlign: 'center',
   },
   modalView: {
     flex: 1,
@@ -133,8 +156,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#4B0082',
     paddingHorizontal: 80,
     alignItems: 'center',
-    marginTop: 20,
-  
+    marginTop: 90,
+    borderRadius: 25,
   }
 })
 /*
